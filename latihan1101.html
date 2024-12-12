@@ -45,10 +45,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $(function(){
+            var pl = "-"
             $("#pilih option[value=-]").attr('selected','selected')
-
+            
             $("select").on('change',function(){
-                
+                pl = $("select").val()
+                //debug nilai dari pl
+                console.log(pl)
             })
 
         })
