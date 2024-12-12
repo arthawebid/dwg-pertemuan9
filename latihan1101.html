@@ -50,8 +50,13 @@
             
             $("select").on('change',function(){
                 pl = $("select").val()
-                //debug nilai dari pl
-                console.log(pl)
+                if(pl=="c2f"){
+                    $("#nCel").prop('disabled',false)
+                    $("#nFah").prop('disabled',true)
+                }else{
+                    $("#nCel").prop('disabled',true)
+                    $("#nFah").prop('disabled',false)
+                }
             })
 
         })
