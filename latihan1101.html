@@ -9,6 +9,9 @@
         .btn-jarak{
             margin-top: 20px;
         }
+        .col-jarak{
+            padding-top: 10px;
+        }
     </style>
   </head>
   <body>
@@ -36,12 +39,12 @@
                 <input type="text" id="nFah" class="form-control" disabled>
             </div>
             <div class="col">
-                <button class="btn btn-warning btn-jarak btn-lg"> Konvert </button>
+                <button id="cmdKonversi" class="btn btn-warning btn-jarak btn-lg"> Konvert </button>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col col-jarak">
                 <span id="txHASIL">Hasil</span>
             </div>
         </div>
@@ -52,6 +55,7 @@
     <script>
         $(function(){
             var pl = "-"
+            var hsl = ""
             $("#pilih option[value=-]").attr('selected','selected')
             
             $("select").on('change',function(){
@@ -63,6 +67,23 @@
                     $("#nCel").prop('disabled',true)
                     $("#nFah").prop('disabled',false)
                 }
+            })
+
+            $("#cmdKonversi").on('click',function(){
+                let nilaiC = 0
+                let nilaiF = 0
+                if(pl=="c2f"){
+                    nilaiC = $("#nCel").val()
+                    nilaiF = nilaiC * 9/5 + 32
+                    $("#nFah").val(nilaiF)
+                    hsl = "<h3>Konversi suhu dari Celcius ke Fahrenheit</h3>"
+                    hsl += "°F = (°C X 9/5) + 32<br>"
+                    hsl += "&nbsp;&nbsp;&nbsp;= ("+ nilaiC +" X 9/5) + 32<br>"
+                    hsl += "&nbsp;&nbsp;&nbsp;= "+nilaiF
+                }else{
+                    //konversi F->C
+                }
+                $("#txHASIL").html(hsl)
             })
 
         })
