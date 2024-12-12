@@ -78,10 +78,11 @@
                     $("#nFah").val(nilaiF)
                     hsl = "<h3>Konversi suhu dari Celcius ke Fahrenheit</h3>"
                     hsl += "°F = (°C X 9/5) + 32<br>"
-                    hsl += "&nbsp;&nbsp;&nbsp;= ("+ nilaiC +" X 9/5) + 32<br>"
-                    hsl += "&nbsp;&nbsp;&nbsp;= "+nilaiF
+                    hsl += "&nbsp;&nbsp;&nbsp;&nbsp;= ("+ nilaiC +" X 9/5) + 32<br>"
+                    hsl += "&nbsp;&nbsp;&nbsp;&nbsp;= "+nilaiF
                 }else{
                     //konversi F->C
+                    // C = (°F − 32) × 5/9
                 }
                 $("#txHASIL").html(hsl)
             })
