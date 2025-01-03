@@ -22,7 +22,7 @@ $(function(){
               </tr>`
                 })
             }
-            $("tbody").html(tbl)
+            $("tbody").html(tbl) 
         },
         error:function(){
             console.log("Gagal Membaca data testimoni")
