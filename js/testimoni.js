@@ -10,7 +10,7 @@ $(function(){
         success:function(dta){
             let tbl = ""
             let ipx = ""
-            if(dta && dta.error==4){
+            if(dta && ((dta.error==4) || (dta.error==0))){
                 dta.TESTI.forEach(function(isi){
                     tbl += `<tr>
                 <td><img src="${isi.GRAVATAR}" width="75"> ${isi.NAMA}</td>
