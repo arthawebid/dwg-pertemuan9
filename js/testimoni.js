@@ -1,9 +1,8 @@
-var NIM = "2401010567"
+var NIM = "2401010062"
 var urlAPI = "https://apimhstiki.ptov.my.id/"
 var urlTestiRead = urlAPI+"testi-"+NIM+"/read"
 
 $(function(){
-
     $.ajax({
         url: urlTestiRead,
         method: "GET",
