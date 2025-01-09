@@ -1,4 +1,4 @@
-var NIM = "2401010062"
+var NIM = "isikan nim anda"
 var urlAPI = "https://apimhstiki.ptov.my.id/"
 var urlTestiRead = urlAPI+"testi-"+NIM+"/read"
 var urlTestiDel = urlAPI+"testi"
